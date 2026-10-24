@@ -1,0 +1,78 @@
+/**
+ * 全局样式重置（Modern CSS Reset）
+ * 参考 Josh W. Comeau "A Modern CSS Reset"（成熟方案）
+ * 目的：清除 HTML 标签默认样式（如 p 的上下 margin、标题 margin、列表 padding 等）
+ */
+
+/* 1. 统一盒模型 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. 移除默认外边距（含 p / 标题 / 列表 / 引用等） */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+}
+
+/* 3. 列表去默认样式 */
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+/* 4. 媒体元素块级化（不处理 svg，避免影响图标库） */
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. 表单控件继承字体 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 6. 长单词/URL 换行 */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 7. 根元素高度与默认排版 */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
